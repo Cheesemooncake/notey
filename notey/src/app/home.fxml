@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<StackPane xmlns:fx="http://javafx.com/fxml/1" fx:id="AP" prefHeight="768.0" prefWidth="1024.0"
+           stylesheets="@home.css" xmlns="http://javafx.com/javafx/8.0.351"
+           fx:controller="app.HomeController">
+    <children>
+        <AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="300.0"
+                    style="-fx-border-color: #5E654F; -fx-border-width: 1;">
+            <children>
+                <BorderPane layoutX="2.0" layoutY="37.0" prefHeight="662.0" prefWidth="1022.0"
+                            AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0"
+                            AnchorPane.topAnchor="36.0">
+                    <top>
+                        <Pane prefHeight="96.0" prefWidth="1022.0" style="-fx-background-color: #f4dfca;"
+                              BorderPane.alignment="CENTER">
+                            <children>
+                                <Text layoutX="468.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="notey"
+                                      wrappingWidth="85.97076416015625">
+                                    <font>
+                                        <Font name="Courier New" size="28.0"/>
+                                    </font>
+                                </Text>
+                            </children>
+                        </Pane>
+                    </top>
+                    <center>
+                        <ScrollPane hbarPolicy="NEVER" prefHeight="759.0" prefWidth="1022.0"
+                                    BorderPane.alignment="CENTER">
+                            <content>
+                                <VBox prefHeight="93.0" prefWidth="1021.0" spacing="30.0">
+                                    <children>
+                                        <HBox alignment="CENTER" prefHeight="35.0" prefWidth="157.0" spacing="10.0">
+                                            <opaqueInsets>
+                                                <Insets/>
+                                            </opaqueInsets>
+                                        </HBox>
+                                        <FlowPane fx:id="FP" alignment="CENTER" hgap="10.0" prefHeight="0.0"
+                                                  prefWidth="561.0" prefWrapLength="0.0" rowValignment="TOP"
+                                                  vgap="30.0"/>
+                                    </children>
+                                    <padding>
+                                        <Insets left="5.0" right="5.0" top="20.0"/>
+                                    </padding>
+                                    <opaqueInsets>
+                                        <Insets/>
+                                    </opaqueInsets>
+                                </VBox>
+                            </content>
+                        </ScrollPane>
+                    </center>
+                </BorderPane>
+                <Pane onMouseDragged="#RootMouseDragged" onMousePressed="#RootMousePressed" prefHeight="35.0"
+                      prefWidth="900.0" style="-fx-background-color: #cfb094;" AnchorPane.leftAnchor="0.0"
+                      AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <MenuBar fx:id="menuBar" layoutY="5.0" maxHeight="98.0" prefHeight="25.0" prefWidth="67.0"
+                                 style="-fx-background-color: #cfb094;">
+                            <menus>
+                                <Menu id="file" fx:id="file" mnemonicParsing="false" text="Файл">
+                                    <items>
+                                        <MenuItem id="close" fx:id="About" mnemonicParsing="false"
+                                                  onAction="#aboutWindow" text="О программе">
+                                            <accelerator>
+                                                <KeyCodeCombination alt="UP" code="I" control="DOWN" meta="UP"
+                                                                    shift="UP" shortcut="UP"/>
+                                            </accelerator>
+                                        </MenuItem>
+                                        <MenuItem id="close" fx:id="close" mnemonicParsing="false"
+                                                  onAction="#closeWindow" text="Выход">
+                                            <accelerator>
+                                                <KeyCodeCombination alt="UP" code="W" control="DOWN" meta="UP"
+                                                                    shift="UP" shortcut="UP"/>
+                                            </accelerator>
+                                        </MenuItem>
+                                    </items>
+                                </Menu>
+                            </menus>
+                        </MenuBar>
+                        <JFXButton contentDisplay="TEXT_ONLY" focusTraversable="false" layoutX="50.0" layoutY="6.0"
+                                   onAction="#refresh" prefHeight="25.0" prefWidth="32.0" text="🔄">
+                            <cursor>
+                                <Cursor fx:constant="HAND"/>
+                            </cursor>
+                        </JFXButton>
+                        <JFXButton focusTraversable="false" layoutX="960.0" layoutY="5.0" onAction="#closeWindow"
+                                   prefHeight="25.0" prefWidth="62.0" text="🚪">
+                            <font>
+                                <Font name="Segoe UI Emoji" size="13.0"/>
+                            </font>
+                        </JFXButton>
+                    </children>
+                </Pane>
+                <JFXTextField fx:id="searchComBox" focusColor="BLACK" layoutX="15.0" layoutY="718.0"
+                              onKeyReleased="#searchEvent" prefHeight="35.0" prefWidth="873.0"
+                              promptText="Поиск в notey" style="-fx-background-color: #e4e4e4;"
+                              unFocusColor="#ffffff00">
+                    <padding>
+                        <Insets left="10.0" right="10.0"/>
+                    </padding>
+                    <font>
+                        <Font name="Courier New" size="12.0"/>
+                    </font>
+                </JFXTextField>
+                <JFXButton focusTraversable="false" layoutX="932.0" layoutY="711.0" onAction="#AddTaskAction"
+                           prefHeight="50.0" prefWidth="77.0" text="➕">
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                    <font>
+                        <Font name="System Bold" size="13.0"/>
+                    </font>
+                </JFXButton>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>
