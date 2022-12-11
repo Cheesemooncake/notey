@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" id="AnchorPane" fx:id="AP" maxHeight="175.0" maxWidth="280.0" prefHeight="175.0"
+            prefWidth="280.0" style="-fx-background-color: #FFFFFF;" stylesheets="@home.css"
+            xmlns="http://javafx.com/javafx/8.0.351" fx:controller="app.AboutController">
+    <children>
+        <VBox layoutX="18.0" layoutY="14.0" prefHeight="147.0" prefWidth="244.0" spacing="20.0">
+            <children>
+                <HBox prefHeight="23.0" prefWidth="249.0" spacing="167.0">
+                    <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="notey">
+                            <font>
+                                <Font name="Courier New" size="13.0"/>
+                            </font>
+                        </Text>
+                        <HBox prefHeight="66.0" prefWidth="48.0" spacing="10.0">
+                            <children>
+                                <HBox alignment="CENTER_LEFT" prefHeight="31.0" prefWidth="205.0" spacing="30.0">
+                                    <children>
+                                        <FontAwesomeIconView glyphName="GITHUB" onMousePressed="#githubAction" size="20"
+                                                             styleClass="btn-contact" text=""/>
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER_LEFT" prefHeight="25.0" prefWidth="190.0" spacing="30.0">
+                                    <children>
+                                        <FontAwesomeIconView glyphName="ENVELOPE" onMousePressed="#mailAction" size="15"
+                                                             styleClass="btn-contact" text=""/>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </HBox>
+                    </children>
+                </HBox>
+                <HBox prefWidth="244.0" spacing="10.0">
+                    <children>
+                        <VBox prefHeight="150.0" prefWidth="247.0" spacing="20.0">
+                            <children>
+                                <Label prefHeight="66.0" prefWidth="265.0" text="Анастасия Силивончик, МОА-211">
+                                    <font>
+                                        <Font name="Courier New Italic" size="13.0"/>
+                                    </font>
+                                </Label>
+                                <JFXButton buttonType="RAISED" maxHeight="33.0" maxWidth="67.0" onAction="#okAction"
+                                           prefHeight="33.0" prefWidth="67.0" style="-fx-background-color: #141e2a;"
+                                           text="Закрыть" textFill="WHITE">
+                                    <font>
+                                        <Font name="Courier New" size="10.0"/>
+                                    </font>
+                                </JFXButton>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
