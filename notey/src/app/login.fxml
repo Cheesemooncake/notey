@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseDragged="#RootMouseDragged" onMousePressed="#RootMousePressed" prefHeight="441.0" prefWidth="228.0" style="-fx-border-color: #fceea7; -fx-border-width: 1.5;" xmlns="http://javafx.com/javafx/8.0.351" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.LoginController">
+<children>
+   <VBox alignment="CENTER" layoutX="26.0" layoutY="149.0" prefHeight="156.0" prefWidth="171.0" spacing="43.0">
+         <children>
+         <JFXTextField fx:id="loginField" focusColor="#fceea7" promptText="Имя пользователя">
+               <font>
+                  <Font name="Franklin Gothic Medium" size="12.0" />
+               </font>
+            </JFXTextField>
+         <JFXPasswordField fx:id="passField" focusColor="#fceea7" promptText="Пароль">
+               <font>
+                  <Font name="Candara" size="12.0" />
+               </font>
+            </JFXPasswordField>
+         </children>
+   </VBox>
+   <Label fx:id="err" layoutX="26.0" layoutY="71.0" prefHeight="78.0" prefWidth="171.0" style="-fx-background-color: #fceea7;" text="notey" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Franklin Gothic Medium Italic" size="12.0" />
+         </font>
+      </Label>
+      <MenuBar layoutX="1.0" layoutY="2.0" visible="false">
+        <menus>
+          <Menu mnemonicParsing="false" text="Файл">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#closeWindow" text="Выход">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="W" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#doLogin" text="Вход">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="E" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#doReg" text="Создать ID">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="N" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   <JFXButton buttonType="RAISED" layoutX="21.0" layoutY="327.0" mnemonicParsing="false" onAction="#doReg" prefHeight="22.0" prefWidth="171.0" style="-fx-background-color: #fceaa7; -fx-border-radius: 1;" text="Создать нового пользователя">
+         <font>
+            <Font name="Franklin Gothic Medium" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="189.0" layoutY="16.0" mnemonicParsing="false" onAction="#closeWindow" text="X" underline="true">
+         <font>
+            <Font name="Franklin Gothic Medium Italic" size="14.0" />
+         </font>
+      </JFXButton>
+   <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="21.0" layoutY="376.0" mnemonicParsing="false" onAction="#doLogin" prefHeight="24.0" prefWidth="171.0" style="-fx-background-color: #fceea7; -fx-background-radius: 1;" text="Вход">
+         <font>
+            <Font name="Franklin Gothic Medium" size="12.0" />
+         </font>
+      </JFXButton>
+</children>
+</AnchorPane>

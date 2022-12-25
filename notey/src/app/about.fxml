@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="AP" maxHeight="175.0" maxWidth="280.0" prefHeight="175.0" prefWidth="195.0" style="-fx-background-color: #fceea7;" stylesheets="@home.css" xmlns="http://javafx.com/javafx/8.0.351" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.AboutController">
+    <children>
+        <VBox layoutX="18.0" layoutY="14.0" prefHeight="147.0" prefWidth="162.0" spacing="20.0">
+            <children>
+                <HBox prefHeight="23.0" prefWidth="161.0" spacing="15.0">
+                    <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="notey">
+                            <font>
+                                <Font name="Franklin Gothic Medium" size="20.0" />
+                            </font>
+                        </Text>
+                        <HBox prefHeight="66.0" prefWidth="48.0" spacing="10.0">
+                            <children>
+                                <HBox alignment="CENTER_LEFT" prefHeight="31.0" prefWidth="205.0" spacing="30.0">
+                                    <children>
+                                        <FontAwesomeIconView glyphName="GITHUB" onMousePressed="#githubAction" size="20" styleClass="btn-contact" text="" />
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER_LEFT" prefHeight="25.0" prefWidth="190.0" spacing="30.0">
+                                    <children>
+                                        <FontAwesomeIconView glyphName="ENVELOPE" onMousePressed="#mailAction" size="15" styleClass="btn-contact" text="" />
+                                    </children>
+                                </HBox>
+                            </children>
+                        </HBox>
+                          <JFXButton buttonType="RAISED" maxHeight="33.0" maxWidth="67.0" onAction="#okAction" prefHeight="27.0" prefWidth="35.0" style="-fx-background-color: #141e2a;" text="X" textFill="WHITE">
+                              <font>
+                                  <Font name="Franklin Gothic Medium" size="10.0" />
+                              </font>
+                          </JFXButton>
+                    </children>
+                </HBox>
+                <HBox prefHeight="105.0" prefWidth="170.0" spacing="10.0">
+                    <children>
+                        <VBox prefHeight="105.0" prefWidth="151.0">
+                            <children>
+                                <Label prefHeight="54.0" prefWidth="144.0" text="Анастасия Силивончик">
+                                    <font>
+                                        <Font name="Franklin Gothic Medium" size="13.0" />
+                                    </font>
+                                </Label>
+                        <Label prefHeight="54.0" prefWidth="144.0" text="МОА-211">
+                           <font>
+                              <Font name="Franklin Gothic Medium" size="13.0" />
+                           </font>
+                        </Label>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

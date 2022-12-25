@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="AP" onMouseDragged="#RootMouseDragged" onMousePressed="#RootMousePressed" prefHeight="600.0" prefWidth="400.0" styleClass="AP" stylesheets="@newnote.css" xmlns="http://javafx.com/javafx/8.0.351" xmlns:fx="http://javafx.com/fxml/1" fx:controller="note.NewNoteController">
+    <children>
+        <VBox layoutX="6.0" layoutY="6.0" prefHeight="400.0" prefWidth="194.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="3.0">
+            <children>
+                <HBox prefHeight="29.0" prefWidth="395.0" spacing="17.0">
+                    <children>
+                        <JFXButton fx:id="closeBTN" Text="Закрыть" cancelButton="true" onAction="#closeAction" prefHeight="25.0" prefWidth="69.0" text="Отмена">
+                            <font>
+                                <Font name="Franklin Gothic Medium" size="12.0" />
+                            </font>
+                        </JFXButton>
+                        <JFXButton fx:id="addBTN" Text="Добавить" onAction="#AddAction" prefHeight="25.0" prefWidth="69.0" text="Добавить">
+                            <font>
+                                <Font name="Franklin Gothic Medium" size="12.0" />
+                            </font>
+                        </JFXButton>
+                    </children>
+                </HBox>
+                <JFXTextArea fx:id="text" focusColor="#ffffff00" nodeOrientation="LEFT_TO_RIGHT" prefHeight="517.0" prefWidth="395.0" promptText="Введите Вашу заметку..." unFocusColor="#ffffff00">
+                    <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </padding>
+                    <font>
+                        <Font name="Bookshelf Symbol 7" size="14.0" />
+                    </font>
+                </JFXTextArea>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
